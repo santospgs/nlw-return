@@ -1,12 +1,36 @@
+window.addEventListener('scroll', onScroll)
 onScroll()
 
 function onScroll(){
+    showNavOnScroll()
+    showBackToTopButtonOnScroll()
+    changeBackgroundBakToTopButton()
+};
+
+function showNavOnScroll(){
     if (scrollY > 0){
         navigation.classList.add('scroll') 
     }else{
         navigation.classList.remove('scroll')
-    }
+    }   
 };
+
+function showBackToTopButtonOnScroll(){
+    console.log(scrollY)
+    if (scrollY > 550){
+        backToTopButton.classList.add('show')
+    } else {        
+        backToTopButton.classList.remove('show')
+    }
+}
+
+function changeBackgroundBakToTopButton(){
+    if (scrollY > 4300){
+        backToTopButton.classList.add('bgWhite')
+    } else {
+        backToTopButton.classList.remove('bgWhite')
+    }
+}
 
 function openMenu(){
     document.body.classList.add('menu-expanded')
