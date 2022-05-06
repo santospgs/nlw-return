@@ -14,6 +14,8 @@
     --brand-beige: hsl(39, 100%, 97%, 1);
     --brand-light: hsl(148, 23%, 89%);
 
+    --btn-hover: hsl(170, 100%, 14%);
+
     --bg-light: hsl(180, 14%, 97%);
 
     --nav-heigth:7.2rem;
@@ -52,12 +54,91 @@ ul{
     list-style: none;
 }
 
+img{
+    max-width: 100%;
+}
+
 section{
     padding-block: 10rem;
 }
 
-/*===============   HOME  ===============*/
+section header h4{
+    font-size: 1.4rem; /*rem é a referencia do navegador*/
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
 
+    color: var(--primary-color);
+
+    margin-bottom: 1.6rem;
+}
+
+section header h2{
+    font-size: 3rem;
+    line-height: 3.9rem;
+
+    color: var(--headline);
+}
+
+section header h1{
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+
+    margin-bottom: 2.4rem;
+}
+
+section .content p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    color: var(--paragraph);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/*===============   NAVIGATION  ===============*/
+
+nav{
+    display: flex;
+
+    height: var(--nav-heigth);
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    transition: all 0.2s ease;   
+
+    z-index: 100;
+}
+
+nav .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+nav.scroll{
+    background: var(--primary-color);
+}
+
+nav.scroll .logo path {
+  fill: white;
+}
+
+nav.scroll button path {
+  stroke: white;
+}
+
+nav button{
+    background: none;
+    border: none;
+    cursor:pointer;
+}
+
+/*===============   HOME  ===============*/
 #home{
     padding-top: calc(4.1rem + var(--nav-heigth));
 }
@@ -73,20 +154,6 @@ section{
     top: 0;
     left: 0;
     z-index: -1;
-}
-
-#home h4{
-    font-size: 1.4rem; /*rem é a referencia do navegador*/
-    color: var(--primary-color);
-    margin-bottom: 1.6rem;
-}
-
-#home h1{
-    font-size: 3.4rem;
-    color: var(--headline);
-    line-height: 130%;
-
-    margin-bottom: 2.4rem;
 }
 
 #home p{
@@ -161,46 +228,6 @@ section{
     line-height: 150%;
 }
 
-/*===============   NAVIGATION  ===============*/
-
-nav{
-    display: flex;
-
-
-    height: var(--nav-heigth);
-
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    transition: all 0.2s ease;   
-
-    z-index: 100;
-}
-
-nav .wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;    
-}
-
-nav.scroll{
-    background: var(--primary-color);
-}
-
-nav.scroll svg:nth-child(1) path {
-  fill: white;
-}
-
-nav.scroll button path {
-  stroke: white;
-}
-
-nav button{
-    background: none;
-    border: none;
-    cursor:pointer;
-}
-
 /*===============   MENU-EXPANDED  ===============*/
 
 body.menu-expanded{
@@ -241,10 +268,6 @@ body.menu-expanded .menu{
 
     transition: transform 200ms ;  
     transform: translateY(0);  
-}
-
-body.menu-expanded nav{
-    position: relative;
 }
 
 .menu ul:nth-child(1){
@@ -305,25 +328,7 @@ body.menu-expanded button path{
 
 
 /*===============   SERVICES  ===============*/
-
-#services header h4{
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0.08rem;
-
-    color: var(--primary-color);
-
-    text-transform: uppercase;
-
-    margin-bottom: 1.6rem;
-}
-
 #services header h2{
-    font-size: 3rem;
-    line-height: 3.9rem;
-
-    color: var(--headline);
-
     margin-bottom: 6rem;
 }
 
@@ -346,4 +351,58 @@ body.menu-expanded button path{
 #services .card h3{
     margin-block: 1.6rem;
 }
+
+/*===============   ABOUT  ===============*/
+#about{
+    background: var(--brand-beige);
+
+    text-align: left;
+}
+
+#about header h2{
+    margin-bottom: 2.4rem;
+}
+
+#about .content p{
+    margin-block: 2.4rem 6rem;
+}
+
+/*===============   CONTACT  ===============*/
+#contact{
+    text-align: left;
+}
+#contact header h2{
+    margin-bottom: 2.4rem;
+}
+
+#contact button{
+    background: var(--primary-color);
+
+    border: none;
+    border-radius: 4rem;
+
+    margin-bottom: 6rem;
+
+    height: 5.2rem;
+    width: 26.3rem;
+
+    color: #FFFFFF;    
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+/*===============   FOOTER  ===============*/
+footer{
+    background: var(--primary-color);
+    width: 100vw;
+    height: 28.5rem;
+}
+
+
 

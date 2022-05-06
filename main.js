@@ -1,3 +1,5 @@
+onScroll()
+
 function onScroll(){
     if (scrollY > 0){
         navigation.classList.add('scroll') 
@@ -24,5 +26,11 @@ ScrollReveal({
     #home .information,
     #services,
     #services header,
-    #services .card`
+    #services .card,
+    #about,
+    #about header,
+    #about .content,
+    #contact,
+    #contact header,
+    #contact .content`
 );
