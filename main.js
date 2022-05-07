@@ -16,7 +16,6 @@ function showNavOnScroll(){
 };
 
 function showBackToTopButtonOnScroll(){
-    console.log(scrollY)
     if (scrollY > 550){
         backToTopButton.classList.add('show')
     } else {        
