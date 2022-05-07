@@ -10,7 +10,7 @@ function onScroll(){
     activateMenuAtCurrentSection(services)
     activateMenuAtCurrentSection(about)
     activateMenuAtCurrentSection(contact)
-};
+}
 
 function activateMenuAtCurrentSection(section){
 
@@ -95,7 +95,5 @@ ScrollReveal({
     #contact .content`
 );
 
-/* let sections = document.body.querySelectorAll('section')
-sections.forEach(function(element){
-    activateMenuAtCurrentSection(element.id)
+/* 
 }) */
