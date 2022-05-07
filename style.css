@@ -564,7 +564,7 @@ footer .social-links{
         opacity: 0.7;
     }
 
-    nav#navigation a.button{
+    nav#navigation .menu a.button{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -599,6 +599,7 @@ footer .social-links{
         transition: opacity 0.5s;
      }
 
+    nav#navigation .menu li a.active, 
     nav#navigation .menu li a:hover{
        opacity: 1;
        font-weight: 700;
@@ -623,12 +624,19 @@ footer .social-links{
         background-color: #FFFFFF;
     }
 
+    nav#navigation .menu li a.active::after,
     nav#navigation .menu li a:hover::after{
         padding-inline: 0.8rem;
         width: 100%;
     }
 
-    nav#navigation .menu a.button:hover{
+    nav#navigation.scroll .menu li a.active,
+    nav#navigation.scroll .menu li a:hover{
+        opacity: 1;
+    }
+
+    nav#navigation.scroll .menu a.button.active, 
+    nav#navigation.scroll .menu a.button:hover{
         background-color: var(--primary-color);
         border: none;
     }
@@ -736,5 +744,28 @@ footer .social-links{
     }
 
     /* --- FOOTER --- */
+
+    footer{
+        padding-block: 8rem;
+    }
+
+    footer .wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'A B';
+    }
+    
+    footer .col-a{
+       align-self: center;
+    }
+
+    footer .col-b{
+        align-self: center;
+        justify-self: flex-end;
+     }
+
+    footer p{
+        margin: 0;
+    }
+    
 
 }
